@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Analytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Analytics</h1>
+    </header>
+    <div class="container">
+        <ul>
+            <li>Total Tasks: {{ analytics['total_tasks'] }}</li>
+            <li>Completed Tasks: {{ analytics['completed_tasks'] }}</li>
+            <li>Overdue Tasks: {{ analytics['overdue_tasks'] }}</li>
+        </ul>
+        <a href="{{ url_for('home') }}" class="button">Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #45a049;
+}
+
+/* Form Styling */
+form {
+    background: #fff;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button Styling */
+button {
+    background: #4CAF50;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Navigation List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 0.5rem 0;
+}
+
+/* Task List */
+.task-item {
+    background: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+/* Style for the profile icon */
+.profile-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;
+    color: #333333;
+    text-decoration: none;
+}
+
+.profile-icon:hover {
+    color: #555555; /* Slightly lighter shade on hover */
+}
+/* Styles for the Enter button */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333333; /* Darker background color */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.button:hover {
+    background-color: #555555; /* Slightly lighter shade on hover */
+}
+
+/* Profile Icon Styling */
+.profile-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem; /* Increase size of the icon */
+    color: #333; /* Dark color for visibility */
+    text-decoration: none;
+}
+
+.profile-icon:hover {
+    color: #555; /* Slightly lighter color on hover */
+}
+
+.container ul li {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.container ul li strong {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.container ul li p {
+    margin-top: 5px;
+    color: #666;
+}
+
+

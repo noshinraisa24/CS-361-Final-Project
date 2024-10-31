@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Edit Task</h1>
+    </header>
+    <div class="container">
+        <form method="post">
+            <label for="title">Task Title:</label>
+            <input type="text" id="title" name="title" value="{{ task['title'] }}" required>
+
+            <label for="description">Task Description:</label>
+            <textarea id="description" name="description" required>{{ task['description'] }}</textarea>
+
+            <label for="due_date">Due Date:</label>
+            <input type="date" id="due_date" name="due_date" value="{{ task['due_date'] }}" required>
+
+            <button type="submit">Save Changes</button>
+        </form>
+        <a href="{{ url_for('your_tasks') }}" class="button">Cancel</a>
+    </div>
+</body>
+</html>
+

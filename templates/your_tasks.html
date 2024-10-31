@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Your Tasks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        // JavaScript function to mark a task as completed
+        function markTaskCompleted(taskId) {
+            fetch(`/complete_task/${taskId}`, { method: 'POST' })
+                .then(response => {
+                    if (response.ok) {
+                        location.reload();  // Reload the page to update the tasks, notifications, and analytics
+                    } else {
+                        console.error('Error completing task');
+                    }
+                })
+                .catch(error => console.error('Fetch error:', error));
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Your Tasks</h1>
+    </header>
+    <div class="container">
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    <div>
+                        <strong>{{ task['title'] }}</strong><br>
+                        <em>{{ task['description'] }}</em><br>
+                        Due: {{ task['due_date'] }}
+                    </div>
+                    <!-- Checkbox to mark task as completed -->
+                    <input type="checkbox" {% if task['completed'] %}checked{% endif %}
+                           onclick="markTaskCompleted({{ loop.index0 }})">
+                    <a href="{{ url_for('edit_task', task_id=loop.index0) }}" class="button">Edit</a>
+                    <a href="{{ url_for('delete_task', task_id=loop.index0) }}" class="button">Delete</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('home') }}" class="button">Back to Home</a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

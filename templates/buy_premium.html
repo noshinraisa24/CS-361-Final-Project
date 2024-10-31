@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Buy Premium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Upgrade to Unlock Advanced Tools</h1>
+    </header>
+    <div class="container">
+        <p>Choose a plan:</p>
+        <ul>
+            <li>
+                <strong>Basic Premium: $4.99/month</strong><br>
+                <p>Includes features like unlimited tasks, custom task colors, and priority support.</p>
+            </li>
+            <li>
+                <strong>Pro Plan: $9.99/month</strong><br>
+                <p>Offers all Basic Premium features, plus advanced task analytics, integrations with other apps (e.g., Google Calendar, Slack), and data export options.</p>
+            </li>
+        </ul>
+        <a href="{{ url_for('home') }}" class="button">Back to Home</a>
+    </div>
+</body>
+</html>
+
+
+

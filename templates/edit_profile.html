@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Edit Profile</h1>
+    </header>
+    <div class="container">
+        <form method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ profile.get('name', '') }}">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ profile.get('email', '') }}">
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" value="{{ profile.get('phone', '') }}">
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" value="{{ profile.get('country', '') }}">
+
+            <label for="job">Job:</label>
+            <input type="text" id="job" name="job" value="{{ profile.get('job', '') }}">
+
+            <button type="submit">Save</button>
+        </form>
+        <a href="{{ url_for('home') }}" class="button">Cancel</a>
+    </div>
+</body>
+</html>
+
+
+
