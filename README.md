@@ -49,4 +49,4 @@ except FileNotFoundError:
 
 ```
 
-C. ![UML Design](images/UML_Design.png)
+C. ![UML Design](UML_Design.png)
